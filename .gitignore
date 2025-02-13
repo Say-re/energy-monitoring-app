@@ -1,0 +1,19 @@
+# General Exclusion
+node_modules/
+.DS_Store
+
+# NextJS Specific
+.next/
+
+
+# Build Output
+dist/
+
+# Logs
+logs/
+
+# Env File
+.env
+
+
+
