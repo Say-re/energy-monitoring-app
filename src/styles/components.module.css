@@ -1,0 +1,6 @@
+.custom-file-input {
+  padding: 6px 18px;
+  background: linear-gradient(135deg, #6D8B74, #3E5C50);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

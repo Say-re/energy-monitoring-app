@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { AuthProvider } from "react-oidc-context";
 import Auth from "./auth";
+import UploadCSV from '../components/upload.tsx';
+import ManualData from '../components/manual-data.tsx'
 
 const cognitoAuthConfig = {
   authority: "https://cognito-idp.us-west-2.amazonaws.com/us-west-2_Gs5pCoWrS",
@@ -15,6 +17,8 @@ export default function Home() {
   return (
     <AuthProvider {...cognitoAuthConfig}>
     <Auth />
+    <UploadCSV />
+    <ManualData />
     <div className={styles.page}>
       <main className={styles.main}>
      </main>
