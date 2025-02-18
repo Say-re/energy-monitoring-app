@@ -1,0 +1,25 @@
+$pale-green:#3E5C50;
+
+.custom-file-input {
+  padding: 6px 18px;
+  background: linear-gradient(135deg, #6D8B74, $pale-green);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.record-table {
+  margin-top: 35px;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 550px;
+  border: 2px solid $pale-green;
+ 
+  tr {
+    padding: 6px 18px;
+  }
+  th {
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 6px;
+  }
+}
