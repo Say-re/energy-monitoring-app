@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 // API
 import postData from '../api/post';
 
@@ -12,12 +12,8 @@ const ManualData = () => {
 
     const auth = useAuth();
 
-    const handleDateInput = (e) => {
+    const handleDateInput = (e: ChangeEvent<HTMLInputElement>) => {
         if (e.target.value !== date) {
-            console.log("Val", e.target.value);
-            console.log("Date", date);
-            console.log("Error", error);
-
             setDate(e.target.value);
         }
     }
@@ -31,12 +27,9 @@ const ManualData = () => {
         return isValid;
     };
 
-    const handleEnergyInput = (e) => {
-        console.log("Val", e.target.value);
-        console.log("Energy", energy, date);
-        console.log("Error", error);
-        if (e.target.value !== energy) {
-            setEnergy(e.target.value);
+    const handleEnergyInput = (e: ChangeEvent<HTMLInputElement>) => {
+        if (Number(e.target.value) && Number(e.target.value) !== energy) {
+            setEnergy(Number(e.target.value));
         }
     }
 
