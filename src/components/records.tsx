@@ -4,7 +4,7 @@ import styles from '../styles/components.module.scss'
 // Types
 interface RecordTableProps {
     data: EnergyUsage[],
-    fields: string[],
+    fields: [keyof EnergyUsage],
     headers: string[]
 }
 
@@ -37,7 +37,7 @@ const RecordsTable = ({
         <tbody>
         {data.map((item, indx: number) => (
             <tr key={indx} className="">
-            {fields.map((field: string) => (
+            {fields.map((field) => (
                 <td key={field} className="">
                 {item[field]}
                 </td>
